@@ -1,6 +1,65 @@
-# AetherWell
+# WellnessWatch
+### Problem Statement
 
-Final year project that involves building a Health Recommendation System using Pyspark and deep learning.
+The objective of this project is to develop a Smart Healthcare Recommendation System using advanced machine learning techniques to address the challenges in healthcare service delivery. The primary challenge is to leverage AI technologies to analyze user symptoms and recommend appropriate doctors based on specialty and availability. This system aims to streamline healthcare processes, improve patient outcomes, and enhance overall healthcare service efficiency.
+
+### Solution
+
+The Smart Healthcare Recommendation System employs machine learning models and modern web technologies to achieve its objectives:
+
+- **Machine Learning Model**: Utilize PySpark and deep learning techniques to develop a recommendation engine capable of analyzing user symptoms and suggesting suitable doctors.
+  
+- **Backend Development**: Implement a Flask-based REST API to serve predictions from the machine learning model and manage system functionalities.
+
+- **Frontend Design**: Develop a user-friendly React-based frontend to allow patients to input symptoms, receive personalized disease recommendations, and book appointments with suitable doctors.
+
+- **Database Management**: Employ SQL or NoSQL databases to store user profiles, appointment details, and critical medical data efficiently.
+
+### Technologies Used
+
+The Smart Healthcare Recommendation System leverages the following technologies:
+
+- **Machine Learning**: PySpark, TensorFlow, or PyTorch for developing and fine-tuning machine learning models.
+
+- **Backend**: Flask for building the RESTful API to serve predictions and manage backend functionalities.
+
+- **Frontend**: React for creating an intuitive and interactive user interface for patients and doctors.
+
+- **Database**: SQL (e.g., PostgreSQL) or NoSQL (e.g., MongoDB) databases for efficient data storage and retrieval.
+
+- **Deployment**: Docker for containerization and Kubernetes for orchestration to ensure scalable and reliable deployment.
+
+- **Security**: Implement secure authentication mechanisms, data encryption techniques, and compliance with data protection regulations 
+ # To Run This Project:-
+ # Use a base image with Node.js installed
+FROM node:18-alpine
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the Node.js application files to the container
+COPY package*.json /.
+# Add other necessary files if required
+
+# Install dependencies
+RUN npm install
+
+# Expose the port on which the Node.js app runs
+
+COPY . .
+
+EXPOSE 3000
+
+# Define the command to run your Node.js app
+CMD ["npm", "start"]
+# REQUIREMENTS
+# pip install -r requirements.txt
+pyspark===3.5.0
+flask===2.0.2
+findspark===2.0.1
+numpy===1.26.0
+Werkzeug==2.2.2
+pandas===2.1.4
 
 # Phase 1
 
