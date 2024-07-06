@@ -30,30 +30,30 @@ The Smart Healthcare Recommendation System leverages the following technologies:
 - **Deployment**: Docker for containerization and Kubernetes for orchestration to ensure scalable and reliable deployment.
 
 - **Security**: Implement secure authentication mechanisms, data encryption techniques, and compliance with data protection regulations 
- # To Run This Project:-
- # Use a base image with Node.js installed
+ ## To Run This Project:-
+ ### Use a base image with Node.js installed
 FROM node:18-alpine
 
-# Set the working directory in the container
+### Set the working directory in the container
 WORKDIR /app
 
-# Copy the Node.js application files to the container
+### Copy the Node.js application files to the container
 COPY package*.json /.
-# Add other necessary files if required
+### Add other necessary files if required
 
-# Install dependencies
+### Install dependencies
 RUN npm install
 
-# Expose the port on which the Node.js app runs
+### Expose the port on which the Node.js app runs
 
 COPY . .
 
 EXPOSE 3000
 
-# Define the command to run your Node.js app
+### Define the command to run your Node.js app
 CMD ["npm", "start"]
-# REQUIREMENTS
-# pip install -r requirements.txt
+### REQUIREMENTS
+### pip install -r requirements.txt
 pyspark===3.5.0
 flask===2.0.2
 findspark===2.0.1
@@ -61,19 +61,19 @@ numpy===1.26.0
 Werkzeug==2.2.2
 pandas===2.1.4
 
-# Phase 1
+## Phase 1
 
 - [x] Building and setting up a Machine Learning model.
 
 - [x] Testing the model
 
-# Phase 2
+## Phase 2
 
 - [x] Building Rest API using Flask
 
 - [ ] Planning Website and Database Structure
 
-# Phase 3
+## Phase 3
 
 - [ ] Building Frontend using React
 
@@ -81,16 +81,16 @@ pandas===2.1.4
 
 - [ ] Getting Patients and Doctors Side ready
 
-# Phase 4
+## Phase 4
 
 - [ ] Building appointment system
 
 - [ ] Testing with real users
 
 
-# Website Plan
+## Website Plan
 
-# User Side:
+### User Side:
 
 - Homepage:
 
@@ -136,7 +136,7 @@ Details of the booked appointment
 
 Option to cancel the appointment
 
-# Doctor Side:
+### Doctor Side:
 
 - Doctor Dashboard:
 
@@ -180,7 +180,7 @@ Receive notifications for new appointment requests
 
 Alerts for any changes in the schedule
 
-# Shared Pages:
+### Shared Pages:
 
 - Login/Registration Page:
 
